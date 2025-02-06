@@ -1,0 +1,85 @@
+/* Ensure the body is centered properly */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f9e3e3;
+  font-family: 'Arial', sans-serif;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Container for top text */
+.top-text-container {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Top text */
+.top-text {
+  font-size: 20px;
+  color: #d32f2f;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Smaller sub-text below the top text */
+.sub-text {
+  font-size: 8px;
+  color: gray;
+  margin-top: 5px;
+}
+
+/* Meme image styling */
+.meme-img {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 50px auto 20px;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Headline */
+h1 {
+  font-size: 2.5em;
+  color: #d32f2f;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+.yes-button, .no-button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.yes-button {
+  background-color: #4caf50;
+  margin-right: 10px;
+}
+
+.no-button {
+  background-color: #f44336;
+}
+
+/* GIF container */
+.gif_container img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
