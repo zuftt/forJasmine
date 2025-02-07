@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-    <title>Yes!</title>
-    <link rel="stylesheet" href="./home.css">
+    <title>For You, Jasmine ❤️</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="header_text">For you Jasmine &lt;3</h1>
+        <h1 class="header_text">For You, Jasmine ❤️</h1>
+        
         <div class="image_container">
             <img src="flowers.jpg" alt="Beautiful flowers">
         </div>
 
-        <!-- Cycling Message -->
-        <div class="cycling-message" id="cyclingMessage">I find you beautiful in every way possible 🌼</div>
+        <div class="cycling-message" id="cyclingMessage">You are beautiful in every way 🌼</div>
 
-        <!-- Buttons Container -->
         <div class="buttons">
             <button class="round-button" onclick="openLetter()">
                 <img src="letter.png" alt="Letter">
             </button>
             <button class="round-button" onclick="goToSongs()">
-                <img src="heart.png" alt="Heart" class="big-icon">
+                <img src="heart.png" alt="Heart">
             </button>
             <button class="round-button" onclick="goToGallery()">
-                <img src="photos.png" alt="Heart" class="big-icon">
+                <img src="photos.png" alt="Gallery">
             </button>
         </div>
     </div>
@@ -37,26 +36,23 @@
             <span class="close" onclick="closeLetter()">&times;</span>
             <h2>My Apology to You ❤️</h2>
             <p>
-                My dearest Jasmine, 
+                My dearest Jasmine,  
                 <br><br>
-                I know that no words can fully undo the pain I’ve caused you, and for that, I am truly sorry.  
-                I never wanted to be the reason for your sadness, yet I know that my actions have hurt you deeply.  
-                There isn’t a day that goes by where I don’t regret what I did, and I carry that weight with me always.  
+                I know that no words can fully undo the pain I’ve caused, and for that, I am truly sorry.  
+                I never wanted to be the reason for your sadness, and it hurts me knowing that I was.  
+                Every day, I carry the regret of my actions.  
                 <br><br>
-                If I could turn back time and take away the moments that made you doubt my love, I would do it in an instant.  
-                But since I can’t, all I can do now is show you—with every word, every action, and every moment we share—  
-                that I never want to be the cause of your pain again.  
+                If I could turn back time and remove the moments that made you doubt my love, I would.  
+                Since I can’t, I want to show you—with every word and every action—that I never  
+                want to be the cause of your pain again.  
                 <br><br>
-                You mean the world to me, Jasmine. Your smile is my happiness, and your laughter is the sweetest sound I know.  
-                No matter how much time passes, my love for you remains unwavering.  
-                I don’t just want to say I’m sorry—I want to prove to you that I am willing to change,  
-                to grow, and to be better for you, for us.  
+                You mean the world to me, Jasmine. Your smile is my happiness, and your laughter is my favorite sound.  
+                No matter how much time passes, my love for you remains strong.  
                 <br><br>
-                I don’t expect forgiveness overnight, and I won’t rush you to move past this.  
-                But please know that I am here, ready to listen, to learn,  
-                and to love you in the way you deserve—patiently, kindly, and wholeheartedly.  
+                I don’t expect forgiveness overnight. But I am here—ready to listen,  
+                to learn, and to love you as you deserve.  
                 <br><br>
-                Always and forever,
+                Always and forever,  
                 <br>
                 Yours truly ❤️  
             </p>
@@ -66,43 +62,37 @@
     <script>
         // Cycling Messages
         const messages = [
-            "I find you beautiful in every way possible 🌼",
+            "You are beautiful in every way 🌼",
             "Forever and always, it's you 💕",
-            "I miss and cherish all our memories together ✨",
+            "I cherish all our memories together ✨",
             "You make my heart smile 😊",
-            "Nanti jom makan K-Fry ❤️"
+            "Let's go for K-Fry soon ❤️"
         ];
-
         let index = 0;
 
         function changeMessage() {
             const messageElement = document.getElementById("cyclingMessage");
-            messageElement.style.opacity = 0; // Fade out
-
+            messageElement.style.opacity = 0;
             setTimeout(() => {
-                messageElement.innerHTML = messages[index]; // Change message
-                messageElement.style.opacity = 1; // Fade in
-                index = (index + 1) % messages.length; // Cycle through messages
-            }, 500); // 0.5s delay for smooth transition
+                messageElement.innerHTML = messages[index];
+                messageElement.style.opacity = 1;
+                index = (index + 1) % messages.length;
+            }, 500);
         }
-
-        setInterval(changeMessage, 3000); // Change message every 3 seconds
+        setInterval(changeMessage, 3000);
 
         function openLetter() {
             document.getElementById("letterModal").style.display = "flex";
         }
-
         function closeLetter() {
             document.getElementById("letterModal").style.display = "none";
         }
-
         function goToSongs() {
-        window.location.href = "songs.html"; // Redirect to songs.html
-    }
-    function goToGallery() {
-        window.location.href = "photos.html"; // Redirect to songs.html
-    }
-
+            window.location.href = "songs.html";
+        }
+        function goToGallery() {
+            window.location.href = "photos.html";
+        }
         window.onclick = function(event) {
             var modal = document.getElementById("letterModal");
             if (event.target == modal) {
