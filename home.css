@@ -2,6 +2,7 @@
 body, html {
     height: 100vh; /* Full viewport height */
     margin: 0;
+    overflow: hidden; /* Prevents scrolling */
     background-color: #ffffff;
     font-family: "Caveat", cursive;
     text-align: center;
@@ -9,7 +10,6 @@ body, html {
     justify-content: center;
     align-items: center;
 }
-
 /* Full-height container */
 .container {
     width: 100%;
@@ -19,6 +19,7 @@ body, html {
     justify-content: center;
     align-items: center;
 }
+
 
 /* Header text */
 .header_text {
@@ -50,7 +51,8 @@ body, html {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between buttons */
+    gap: 20px;
+    margin-bottom: 50px; /* Adds space below the buttons */
 }
 
 /* Round buttons */
