@@ -1,0 +1,77 @@
+/* Make sure the content fills the full screen */
+body, html {
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Header text */
+.header_text {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between photos */
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.sub-text {
+    font-size: 10px;
+    color: gray;
+    margin-top: 35px;
+  }
+
+/* Individual Photo Card */
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8ece3;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.photo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover; /* Ensures image fits perfectly */
+}
+
+/* Photo Captions */
+.photo-card p {
+    font-size: 1.3em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .photo-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}

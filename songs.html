@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Songs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="songs.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">Songs that remind me of You 🎶❤️</h1>
+        
+        <div class="songs-list" id="songsList">
+            <!-- Songs will be inserted here dynamically -->
+        </div>
+    </div>
+
+    <script>
+        // Song Data with Links
+        const songs = [
+            {
+                cover: "album1.png",
+                title: "Baby Came Home 2 / Valentines",
+                author: "The Neighbourhood",
+                description: "\"You can call me up, phone works two ways, you know.\"",
+                link: "https://www.youtube.com/watch?v=WkNE5WGyz0k"
+            },
+            {
+                cover: "album2.png",
+                title: "Superpowers",
+                author: "Daniel Caesar",
+                description: "\"It's crazy to say this, but you're the greatest (You are the greatest)\"",
+                link: "https://www.youtube.com/watch?v=rScwLoES2bM"
+            },
+            {
+                cover: "album3.jpg",
+                title: "Best Friend",
+                author: "Rex Orange County",
+                description: `\"And that's because  
+                I wanna be your favorite boy,  
+                I wanna be the one that makes your day,  
+                The one you think about as you lie awake 💕.\"`,
+                link: "https://www.youtube.com/watch?v=OqBuXQLR4Y8"
+            },
+            {
+                cover: "album4.jpg",
+                title: "Apocalypse",
+                author: "Cigarettes After Sex",
+                description: `"Oh, when you're all alone"  
+                I will reach for you  
+                When you're feeling low  
+                I will be there too"`,
+                link: "https://www.youtube.com/watch?v=sElE_BfQ67s"
+            },
+            {
+            cover: "album5.png",  // Add an album cover for Frank Ocean
+            title: "Thinkin Bout You",
+            author: "Frank Ocean",
+            description: `"I've been thinkin' 'bout you,  
+            do you think about me still?"`,
+            link: "https://www.youtube.com/watch?v=6JHu3b-pbh8"
+            }
+        ];
+
+        // Function to Generate Song Cards
+        function displaySongs() {
+            const songsList = document.getElementById("songsList");
+
+            songs.forEach(song => {
+                const songCard = document.createElement("a"); // Make it clickable
+                songCard.classList.add("song-card");
+                songCard.href = song.link; // Attach song link
+                songCard.target = "_blank"; // Opens in new tab
+                songCard.rel = "noopener noreferrer"; // Security best practice
+
+                songCard.innerHTML = `
+                    <img src="${song.cover}" alt="${song.title} Album Cover">
+                    <div class="song-info">
+                        <h2>${song.title}</h2>
+                        <h3>${song.author}</h3>
+                        <p>${song.description}</p>
+                    </div>
+                `;
+
+                songsList.appendChild(songCard);
+            });
+        }
+
+        // Load Songs on Page Load
+        window.onload = displaySongs;
+    </script>
+</body>
+</html>

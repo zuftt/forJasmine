@@ -22,8 +22,11 @@
             <button class="round-button" onclick="openLetter()">
                 <img src="letter.png" alt="Letter">
             </button>
-            <button class="round-button">
+            <button class="round-button" onclick="goToSongs()">
                 <img src="heart.png" alt="Heart" class="big-icon">
+            </button>
+            <button class="round-button" onclick="goToGallery()">
+                <img src="photos.png" alt="Heart" class="big-icon">
             </button>
         </div>
     </div>
@@ -32,16 +35,30 @@
     <div id="letterModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeLetter()">&times;</span>
-            <h2></h2>
+            <h2>My Apology to You ❤️</h2>
             <p>
-                My dearest Jasmine,  
-                Every day with you is a dream come true.  
-                Your smile lights up my world,  
-                and your laughter is the sweetest melody.  
-                You are my heart, my soul, and my greatest adventure.  
-                I cherish you more than words can express.  
-                Always and forever,  
-                Yours truly. ❤️  
+                My dearest Jasmine, 
+                <br><br>
+                I know that no words can fully undo the pain I’ve caused you, and for that, I am truly sorry.  
+                I never wanted to be the reason for your sadness, yet I know that my actions have hurt you deeply.  
+                There isn’t a day that goes by where I don’t regret what I did, and I carry that weight with me always.  
+                <br><br>
+                If I could turn back time and take away the moments that made you doubt my love, I would do it in an instant.  
+                But since I can’t, all I can do now is show you—with every word, every action, and every moment we share—  
+                that I never want to be the cause of your pain again.  
+                <br><br>
+                You mean the world to me, Jasmine. Your smile is my happiness, and your laughter is the sweetest sound I know.  
+                No matter how much time passes, my love for you remains unwavering.  
+                I don’t just want to say I’m sorry—I want to prove to you that I am willing to change,  
+                to grow, and to be better for you, for us.  
+                <br><br>
+                I don’t expect forgiveness overnight, and I won’t rush you to move past this.  
+                But please know that I am here, ready to listen, to learn,  
+                and to love you in the way you deserve—patiently, kindly, and wholeheartedly.  
+                <br><br>
+                Always and forever,
+                <br>
+                Yours truly ❤️  
             </p>
         </div>
     </div>
@@ -78,6 +95,13 @@
         function closeLetter() {
             document.getElementById("letterModal").style.display = "none";
         }
+
+        function goToSongs() {
+        window.location.href = "songs.html"; // Redirect to songs.html
+    }
+    function goToGallery() {
+        window.location.href = "photos.html"; // Redirect to songs.html
+    }
 
         window.onclick = function(event) {
             var modal = document.getElementById("letterModal");

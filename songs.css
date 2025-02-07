@@ -1,0 +1,107 @@
+/* Make sure the page expands dynamically */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Keeps the header visible */
+    min-height: 100vh;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header text */
+.header_text {
+    font-size: 2.5em;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+/* Songs list container - No scrolling, everything fits */
+.songs-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow songs to wrap into multiple lines */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px; /* Adds space after the last song */
+}
+
+/* Clickable song card */
+.song-card {
+    display: flex;
+    align-items: center;
+    background: #fff7f0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none; /* Remove link underline */
+    color: inherit; /* Keep default text color */
+}
+
+/* Add hover effect */
+.song-card:hover {
+    transform: scale(1.05);
+    background-color: #ffe5d4; /* Slightly change background on hover */
+}
+
+/* Album cover */
+.song-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+/* Song details */
+.song-info {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.song-info h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 5px 0;
+}
+
+.song-info h3 {
+    font-size: 1.2em;
+    color: #d32f2f;
+    margin: 5px 0;
+}
+
+.song-info p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .song-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .song-card img {
+        margin-bottom: 10px;
+    }
+}
