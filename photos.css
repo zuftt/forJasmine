@@ -1,15 +1,17 @@
 /* Make sure the content fills the full screen */
 body, html {
-    height: 100vh;
+    min-height: 100vh; /* Change from height: 100vh to min-height */
     margin: 0;
     background-color: #ffffff;
     font-family: "Caveat", cursive;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Aligns content from the top */
     align-items: center;
     flex-direction: column;
+    padding-top: 20px; /* Adds a little space at the top */
 }
+
 
 /* Main container */
 .container {
@@ -45,7 +47,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #f8ece3;
+    background: #f8d0b2;
     padding: 15px;
     border-radius: 10px;
     max-width: 250px;

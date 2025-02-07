@@ -13,13 +13,13 @@ body, html {
 /* Full-height container */
 .container {
     width: 100%;
-    height: 100%;
+    height: 90vh; /* Slightly reduced height to leave space at the bottom */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px; /* Ensures space at the bottom */
 }
-
 
 /* Header text */
 .header_text {
@@ -52,7 +52,7 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 50px; /* Adds space below the buttons */
+    margin-bottom: 80px; /* Adds extra space below the buttons */
 }
 
 /* Round buttons */
